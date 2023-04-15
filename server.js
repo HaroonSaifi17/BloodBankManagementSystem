@@ -1,7 +1,8 @@
 const express = require('express')
-const ejs = require('ejs')
 const app = express()
+const path = require('path');
 const port = 4200
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
