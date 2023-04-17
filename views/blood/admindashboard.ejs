@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/admin.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f3e3fddff.js" crossorigin="anonymous"></script>
+  <script src="/script.js"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="wpr">
+      <div class="logo">
+        <a href="">
+          <i class="fa-solid fa-droplet"></i>
+          Blood Bank
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="aaa-wpr">
+    <div id="n2" class="n2">
+      <ul>
+        <li>
+          <a href="admindashboard">
+            Blood Stock
+          </a>
+        </li>
+        <li>
+          <a href="/admindonordetail">
+            Donor
+          </a>
+        </li>
+        <li>
+          <a href="adminpatientdetail">
+            Patient
+          </a>
+        </li>
+        <li>
+          <a class="button-77" href="logout">
+            Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+      <div id="pp" class="t-card">
+      <h1 class="h1">Blood Stock</h1>
+        <div class="ff-c">
+      <% results.forEach((result)=>{ %>
+    <div class="card">
+        <h2><%= result.blood_group %> </h2>
+        <p><%= result["count(*)"]  %> </p>
+    </div>
+      <% }); %>
+        </div>
+  </div>
+  </div>
+  <footer>
+    <p>Copyright &copy; 2023 <br> Blood Bank Management System.<br>
+      All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
