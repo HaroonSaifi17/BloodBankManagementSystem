@@ -57,7 +57,7 @@ footer {
   padding: 10px;
   border-top: 5px solid var(--light-grey);
 }
-.card{
+.card {
   width: 200px;
   height: 100px;
   background: var(--dark-red);
@@ -69,25 +69,26 @@ footer {
   flex-direction: column;
   color: white;
 }
-.dd,.cc{
- padding: 15px;
- width: 150px;
- display: inline-block;
+.dd,
+.cc {
+  padding: 15px;
+  width: 150px;
+  display: inline-block;
 }
-.ww{
+.ww {
   padding: 10px;
   border: 1px solid black;
 }
-.t-card{
+.t-card {
   display: flex;
   flex-direction: column;
   margin: 50px auto;
 }
-.h1{
+.h1 {
   text-align: center;
   margin-bottom: 50px;
 }
-.w1{
+.w1 {
   background: var(--dark-red);
   color: white;
 }
@@ -104,7 +105,7 @@ footer {
   display: inline-block;
   flex-direction: row;
   flex-shrink: 0;
-  font-family: Eina01,sans-serif;
+  font-family: Eina01, sans-serif;
   font-size: 16px;
   font-weight: 800;
   justify-content: center;
@@ -140,8 +141,8 @@ footer {
 }
 
 .button-77:before {
-  background-color: rgba(249, 58, 19, .32);
-  content: "";
+  background-color: rgba(249, 58, 19, 0.32);
+  content: '';
   display: block;
   height: 100%;
   left: 0;
@@ -156,7 +157,7 @@ footer {
   background-color: initial;
   background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
   bottom: 4px;
-  content: "";
+  content: '';
   display: block;
   left: 4px;
   overflow: hidden;
@@ -180,7 +181,12 @@ footer {
 }
 
 .button-77:active:not(:disabled):after {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
   bottom: 4px;
   left: 4px;
   right: 4px;
@@ -189,11 +195,18 @@ footer {
 
 .button-77:disabled {
   cursor: default;
-  opacity: .24;
+  opacity: 0.24;
 }
-.ff-c{
+.ff-c {
   display: flex;
+  flex-wrap:wrap;
 }
-#pp{
-  margin:50px 10px;
+#pp {
+  margin: 50px 10px;
+}
+.ss {
+  width: 50px;
+}
+.mm {
+  width: 200px;
 }

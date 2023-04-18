@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title></title>
   <meta charset="UTF-8">
@@ -11,7 +12,8 @@
   <script src="https://kit.fontawesome.com/7f3e3fddff.js" crossorigin="anonymous"></script>
   <script src="/script.js"></script>
 </head>
-  <body>
+
+<body>
   <nav>
     <div class="wpr">
       <div class="logo">
@@ -46,7 +48,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="patientform">
               Patient
             </a>
           </li>
@@ -54,18 +56,25 @@
       </div>
     </div>
   </nav>
-    <div class="login-box">
-      <h1>Admin Login</h1>
-      <form action="adminlogin" method="post">
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username" required>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required>
-  <% if (errorMessage) { %>
-    <p><%= errorMessage %></p>
-  <% } %>
-        <button type="submit" name="login">Login</button>
-      </form>
-    </div>
-  </body>
+  <div id="ppt" class="login-box">
+    <h1>Admin Login</h1>
+    <form action="adminlogin" method="post">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" required>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required>
+      <% if (errorMessage) { %>
+        <p>
+          <%= errorMessage %>
+        </p>
+        <% } %>
+          <button type="submit" name="login">Login</button>
+    </form>
+  </div>
+  <footer>
+    <p>Copyright &copy; 2023 <br> Blood Bank Management System.<br>
+      All rights reserved.</p>
+  </footer>
+</body>
+
 </html>

@@ -17,7 +17,7 @@
   <nav>
     <div class="wpr">
       <div class="logo">
-        <a href="">
+        <a href="/">
           <i class="fa-solid fa-droplet"></i>
           Blood Bank
         </a>
@@ -49,17 +49,21 @@
         </li>
       </ul>
     </div>
-      <div id="pp" class="t-card">
+    <div id="pp" class="t-card">
       <h1 class="h1">Blood Stock</h1>
-        <div class="ff-c">
-      <% results.forEach((result)=>{ %>
-    <div class="card">
-        <h2><%= result.blood_group %> </h2>
-        <p><%= result["count(*)"]  %> </p>
+      <div class="ff-c">
+        <% results.forEach((result)=>{ %>
+          <div class="card">
+            <h2>
+              <%= result.blood_group %>
+            </h2>
+            <p>
+              <%= result["count(*)"] %>
+            </p>
+          </div>
+          <% }); %>
+      </div>
     </div>
-      <% }); %>
-        </div>
-  </div>
   </div>
   <footer>
     <p>Copyright &copy; 2023 <br> Blood Bank Management System.<br>

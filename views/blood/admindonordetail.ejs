@@ -17,7 +17,7 @@
   <nav>
     <div class="wpr">
       <div class="logo">
-        <a href="">
+        <a href="/">
           <i class="fa-solid fa-droplet"></i>
           Blood Bank
         </a>
@@ -50,25 +50,37 @@
       </ul>
     </div>
     <div class="t-card">
-        <h1 class="h1">Donor Details</h1>
-        <div class="ww w1">
+      <h1 class="h1">Donor Details</h1>
+      <div class="ww w1">
         <span class="cc"> Name</span>
-        <span class="cc"> Age</span>
-        <span class="cc"> Gender</span>
-        <span class="cc"> Blood group</span>
+        <span class="cc ss"> Age</span>
+        <span class="cc ss"> Gender</span>
+        <span class="cc ss"> Blood group</span>
         <span class="cc"> Phone number</span>
-        <span class="cc"> Email</span>
-        </div>
+        <span class="cc mm"> Email</span>
+      </div>
       <% results.forEach((result)=>{ %>
         <div class="ww">
-        <span class="dd"> <%= result.name %></span>
-        <span class="dd"> <%= result.age %></span>
-        <span class="dd"> <%= result.gender %></span>
-        <span class="dd"> <%= result.blood_group %></span>
-        <span class="dd"> <%= result.phone_number %></span>
-        <span class="dd"> <%= result.email %></span>
+          <span class="dd">
+            <%= result.name %>
+          </span>
+          <span class="dd ss">
+            <%= result.age %>
+          </span>
+          <span class="dd ss ">
+            <%= result.gender %>
+          </span>
+          <span class="dd ss">
+            <%= result.blood_group %>
+          </span>
+          <span class="dd ">
+            <%= result.phone_number %>
+          </span>
+          <span class="dd mm">
+            <%= result.email %>
+          </span>
         </div>
-      <% }); %>
+        <% }); %>
     </div>
   </div>
   <footer>

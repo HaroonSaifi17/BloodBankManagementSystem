@@ -1,56 +1,58 @@
-:root{
-  --grey:#2b2b42;
-  --light-grey:#8d99ae;
-  --lightest-grey:#edf2f4;
-  --red:#ef233c;
-  --dark-red:#d90429;
+:root {
+  --grey: #2b2b42;
+  --light-grey: #8d99ae;
+  --lightest-grey: #edf2f4;
+  --red: #ef233c;
+  --dark-red: #d90429;
 }
-*{
+* {
   margin: 0;
   padding: 0;
   text-decoration: none;
   font-family: 'Nunito Sans', sans-serif;
-  z-index:0;
+  z-index: 0;
 }
-body{
+body {
   scroll-behavior: smooth;
-   overflow-x: hidden;
-   overflow-y:auto ;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: relative;
+  min-height: 100vh;
 }
-.wpr{
+.wpr {
   display: flex;
   justify-content: space-between;
-  padding:0 7vw;
+  padding: 0 7vw;
   height: 50px;
   align-items: center;
   background: var(--grey);
 }
-ul{
+ul {
   display: flex;
 }
-li{
+li {
   list-style: none;
 }
-li a{
+li a {
   margin: 0 7px;
   padding: 10px;
   color: var(--lightest-grey);
 }
-.logo a{
+.logo a {
   color: var(--lightest-grey);
 }
-.fa-droplet{
+.fa-droplet {
   color: var(--red);
 }
-.burger{
+.burger {
   display: none;
 }
-@media (max-width:600px){
-  .burger{
+@media (max-width: 600px) {
+  .burger {
     display: inline-block;
     z-index: 1;
   }
-  .n2{
+  .n2 {
     position: fixed;
     right: -50vw;
     top: 0;
@@ -58,35 +60,36 @@ li a{
     height: 100vh;
     background: var(--grey);
     box-shadow: black 0px 8px 24px;
-    transition-duration:500ms;
+    transition-duration: 500ms;
+    z-index: 10;
   }
-  ul{
+  ul {
     flex-direction: column;
     margin-top: 60px;
   }
-  ul li{
+  ul li {
     padding: 5px 10px;
   }
-  .fa-bars,.fa-xmark{
+  .fa-bars,
+  .fa-xmark {
     color: white;
   }
-  #n3{
-    display:inline-block;
+  #n3 {
+    display: inline-block;
   }
-  #n4{
-    display:none;
+  #n4 {
+    display: none;
   }
 }
-.m-wpr{
+.m-wpr {
   margin: auto;
-  margin-top: 15vw;
+  margin-top: 10vw;
   width: 90vw;
   max-width: 600px;
 }
 .hero {
   display: flex;
   flex-direction: column;
-  background-image: "/blood.jpg";
 }
 h1 {
   color: var(--dark-red);
@@ -110,18 +113,18 @@ h3 {
   font-weight: 900;
   font-size: 35px;
 }
-.hero__para{
+.hero__para {
   color: var(--light-grey);
   line-height: 140%;
   max-width: 540px;
 }
-.abb{
-  margin: 20vw 0 50px 0;
+.abb {
+  margin: 10vw 0 50px 0;
 }
-.t-wpr{
+.t-wpr {
   display: flex;
 }
-.t{
+.t {
   height: 75px;
   margin: 10px;
   flex-grow: 1;
@@ -132,20 +135,23 @@ h3 {
   display: flex;
   justify-content: center;
 }
-.t p{
+.t p {
   margin: auto;
 }
-footer p{
+footer p {
   text-align: center;
   color: white;
 }
-footer{
+footer {
   background: var(--grey);
   padding: 10px;
   border-top: 5px solid var(--light-grey);
   margin-top: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
 }
-img{
+img {
   width: 100vw;
   opacity: 0.5;
 }
@@ -157,7 +163,7 @@ img{
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
@@ -172,8 +178,8 @@ label {
   margin-bottom: 10px;
 }
 
-input[type="text"],
-input[type="password"] {
+input[type='text'],
+input[type='password'] {
   width: 90%;
   padding: 10px;
   font-size: 16px;
@@ -183,7 +189,7 @@ input[type="password"] {
   margin-bottom: 20px;
 }
 
-button[type="submit"] {
+button[type='submit'] {
   background: var(--grey);
   color: #fff;
   border: none;
@@ -194,16 +200,13 @@ button[type="submit"] {
 }
 
 .login-box {
-  position: absolute;
-  top: 400px;
-  left: 50%;
   width: 400px;
   padding: 40px;
-  transform: translate(-50%, -50%);
   background: var(--grey);
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
+  margin: 50px auto;
 }
 
 .login-box h2 {
@@ -230,13 +233,13 @@ button[type="submit"] {
 }
 .login-box .user-box label {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   padding: 10px 0;
   font-size: 16px;
   color: #fff;
   pointer-events: none;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .login-box .user-box input:focus ~ label,
@@ -256,19 +259,17 @@ button[type="submit"] {
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
-  transition: .5s;
+  transition: 0.5s;
   margin-top: 40px;
-  letter-spacing: 4px
+  letter-spacing: 4px;
 }
 
 .login-box a:hover {
   background: #03e9f4;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4,
-              0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 100px #03e9f4;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
 }
 
 .login-box a span {
@@ -289,7 +290,8 @@ button[type="submit"] {
   0% {
     left: -100%;
   }
-  50%,100% {
+  50%,
+  100% {
     left: 100%;
   }
 }
@@ -301,14 +303,15 @@ button[type="submit"] {
   height: 100%;
   background: linear-gradient(180deg, transparent, #03e9f4);
   animation: btn-anim2 1s linear infinite;
-  animation-delay: .25s
+  animation-delay: 0.25s;
 }
 
 @keyframes btn-anim2 {
   0% {
     top: -100%;
   }
-  50%,100% {
+  50%,
+  100% {
     top: 100%;
   }
 }
@@ -320,14 +323,15 @@ button[type="submit"] {
   height: 2px;
   background: linear-gradient(270deg, transparent, #03e9f4);
   animation: btn-anim3 1s linear infinite;
-  animation-delay: .5s
+  animation-delay: 0.5s;
 }
 
 @keyframes btn-anim3 {
   0% {
     right: -100%;
   }
-  50%,100% {
+  50%,
+  100% {
     right: 100%;
   }
 }
@@ -339,14 +343,93 @@ button[type="submit"] {
   height: 100%;
   background: linear-gradient(360deg, transparent, #03e9f4);
   animation: btn-anim4 1s linear infinite;
-  animation-delay: .75s
+  animation-delay: 0.75s;
 }
 
 @keyframes btn-anim4 {
   0% {
     bottom: -100%;
   }
-  50%,100% {
+  50%,
+  100% {
     bottom: 100%;
   }
+}
+#bbk {
+  text-align: left;
+}
+/* Style the section */
+#donate-blood {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* Style the headings */
+#donate-blood h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+#donate-blood h3 {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Style the lists */
+#donate-blood ul,
+#donate-blood ol {
+  margin-left: 30px;
+}
+
+#donate-blood li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Style the link */
+#donate-blood a {
+  color: #dc143c;
+  text-decoration: none;
+}
+
+#donate-blood a:hover {
+  text-decoration: underline;
+}
+/* Style the section */
+#blood-for-patient {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* Style the headings */
+#blood-for-patient h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+#blood-for-patient ol {
+  margin-left: 30px;
+}
+
+#blood-for-patient li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#blood-for-patient a {
+  color: #dc143c;
+  text-decoration: none;
+}
+
+#blood-for-patient a:hover {
+  text-decoration: underline;
+}
+#ppt {
+  background: white;
+}
+#hh2 {
+  position: relative;
 }
